@@ -23,6 +23,7 @@
 <a class="card app" href="https://korckyjals-grok-bot.github.io/stadt-unterwegs/" data-app="https://korckyjals-grok-bot.github.io/stadt-unterwegs/"><span class="em">🏙️</span><span><b>In der Stadt unterwegs</b><br><small>Dativ, Orte, Wegbeschreibungen</small></span><span class="ck" data-k="stadt" data-max="4"></span></a>
 <a class="card app" href="https://korckyjals-grok-bot.github.io/artikel-orte/" data-app="https://korckyjals-grok-bot.github.io/artikel-orte/"><span class="em">🏷️</span><span><b>der · die · das</b><br><small>Artículos de los lugares</small></span><span class="ck" data-k="artikel" data-max="3"></span></a>
 <a class="card app" href="https://korckyjals-grok-bot.github.io/relato-stadt/" data-app="https://korckyjals-grok-bot.github.io/relato-stadt/"><span class="em">📜</span><span><b>Mein Tag in der Stadt</b><br><small>Relato: zum/zur, mit, im/in den</small></span><span class="ck" data-k="relato" data-max="4"></span></a>
+<a class="card app" href="https://korckyjals-grok-bot.github.io/fahrzeuge/" data-app="https://korckyjals-grok-bot.github.io/fahrzeuge/"><span class="em">🚲</span><span><b>In der Stadt 1 – Fahrzeuge</b><br><small>Vehículos: der/die/das, plural, fährt ab, schneller</small></span><span class="ck" data-k="fahrzeuge" data-max="5"></span></a>
 <a class="card app" href="https://korckyjals-grok-bot.github.io/wortschatz/" data-app="https://korckyjals-grok-bot.github.io/wortschatz/"><span class="em">📚</span><span><b>Wortschatz</b><br><small>Vocabulario</small></span><span class="ck" data-k="wortschatz" data-max="4"></span></a>
 </div>
 <a class="back" href="https://korckyjals-grok-bot.github.io/materias/" data-app="https://korckyjals-grok-bot.github.io/materias/">🏠 Todas las materias</a>
@@ -52,8 +53,8 @@ apply();
 </script>
 <script>
 document.querySelectorAll(".ck").forEach(e=>{
-  const map={zudativ:"aleman_check_zudativ",gehen:"aleman_check_gehen",verkehr:"aleman_check_verkehr",stadt:"aleman_check_stadt",artikel:"aleman_check_artikel",relato:"aleman_check_relato"};
-  const bestMap={zudativ:"zudativ_best",gehen:"gehen_best",verkehr:"verkehr_best",stadt:"stadt_best",artikel:"artikel_best",relato:"relato_best"};
+  const map={zudativ:"aleman_check_zudativ",gehen:"aleman_check_gehen",verkehr:"aleman_check_verkehr",stadt:"aleman_check_stadt",artikel:"aleman_check_artikel",relato:"aleman_check_relato",fahrzeuge:"aleman_check_fahrzeuge"};
+  const bestMap={zudativ:"zudativ_best",gehen:"gehen_best",verkehr:"verkehr_best",stadt:"stadt_best",artikel:"artikel_best",relato:"relato_best",fahrzeuge:"fahrzeuge_best"};
   let c=[];try{c=JSON.parse(localStorage.getItem(map[e.dataset.k])||"[]")}catch(x){}
   const max=+e.dataset.max||4;
   const best=+(localStorage.getItem(bestMap[e.dataset.k])||0);
